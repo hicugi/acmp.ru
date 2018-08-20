@@ -1,5 +1,18 @@
+/*
+	Отрезок задан координатами своих концевых точек. Требуется вычислить длину этого отрезка.
+
+	Входные данные
+		Входной файл INPUT.TXT содержит координаты концов отрезка в формате X1 Y1 X2 Y2 . Все координаты – целые числа, не превышающие 1000 по абсолютной величине.
+
+	Выходные данные
+		В выходной файл OUTPUT.TXT выведите длину отрезка с точностью 10-5.
+
+	Пример
+		3 4 8 4 =	5
+*/
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 
 int main(){
@@ -13,9 +26,8 @@ int main(){
 	y = Y[1] - Y[0];
 	
 	res = pow(x ,2) + pow(y ,2);
-	res = sqrt(+res);
+	res = sqrt(res);
 	
-	cout << res;
-	
-	return 0;
+	// wrong answer on 3
+	cout << setprecision(5) << res;
 }
