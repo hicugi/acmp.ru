@@ -37,11 +37,12 @@ int main() {
     min++;
   }
 
-  if( n == 5 ) min = 2;
-  if( n == 4 ) min = 3;
-  if( n == 3 ) min = 4;
-  if( n == 2 ) min = 5;
-  if( n == 1 ) min = 6;
+  if( n == 5 ){ min += 2; n = 0; }
+  if( n == 4 ){ min += 3; n = 0; }
+  if( n == 3 ){ min += 4; n = 0; }
+  if( n == 2 ){ min += 5; n = 0; }
+  if( n == 1 ){ min += 6; n = 0; }
 
+  // wrong answer on 16
   cout << min << " " << max;
 }
